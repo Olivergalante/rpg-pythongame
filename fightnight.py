@@ -18,8 +18,10 @@ class Goblin:
         self.power = power
 
     def spit(self, hero):
-        print(f"{self.name} spits acid at {hero.name} but does minimal damage to his armor 😎.")
-        hero.health -= 1
+        print(f"{self.name} spits acid at {hero.name}.")
+        print(f"{villain1.power} - {hero1.health}")
+        hero.health -= villain1.power
+        print(f"{hero1.name} now has {hero1.health}")
 
     def is_alive(self):
         return self.health > 0
@@ -71,6 +73,7 @@ def main():
                     villain1.spit(hero1)
                 elif action == "2":
                     print(f"{villain1.name} has called for more villains who will arrive shortly.")
+                    break
                 else:
                     print("Invalid input.")
         elif user_input == "3":
